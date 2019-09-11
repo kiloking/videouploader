@@ -1,0 +1,1 @@
+const ffmpeg = spawn('ffmpeg', ['-y','-i', `${parent}/${video}.mp4`, '-c:v', 'libvpx', '-quality', 'good', '-cpu-used', '0', '-b:v', '500k', '-crf', '12', '-pix_fmt', 'yuv420p', '-movflags', `faststart`,`scale=-1:${quality}`, `${parent}/transcoded/${video}_${quality}.webm`]);
